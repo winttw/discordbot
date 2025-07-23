@@ -8,10 +8,10 @@ intents.message_content = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 DATA_FILE = 'bets_data.json'
-OWNER_ID = YOUR_USER_ID_HERE  # Replace with your Discord User ID as an int
-ALLOWED_CHANNEL_ID = 1257876212710113291  # Channel where set_balance is allowed
+OWNER_ID = YOUR_USER_ID_HERE  # Replace my account ID but since this is github =.=
+ALLOWED_CHANNEL_ID = YOUR_GAMBLING_CHANNEL #Replace with your channel ID
 
-def moneyline_to_decimal(ml: int) -> float:
+def moneyline_to_decimal(ml: int) -> float: #googled how moneylines worked teehee ¯\_(ツ)_/¯
     if ml > 0:
         return round((ml / 100) + 1, 2)
     else:
